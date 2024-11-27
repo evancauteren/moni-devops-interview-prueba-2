@@ -20,7 +20,7 @@ Se puede probar el código de la siguiente forma:
 
 - Una vez que los contenedores están corriendo, podemos acceder desde un navegador al frontend:
 ```localhost:3000```
-- Y al backend:
+- Y al backend:  
 ```localhost:8000```
 
 #### Prerequisitos:
