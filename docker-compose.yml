@@ -1,0 +1,47 @@
+###### BACKEND
+services:
+  backend:
+    image: app:backend
+    container_name: django_backend
+    environment:
+      SECRET_KEY: DDrYHwebI20_0vLOVONbblMWaSBtwVE4-0VUBZauwdmYklvUmTqwGfy_5aG_nK9sf7k
+    build:
+      context: ./backend
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    command: python manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - db
+
+###### FRONTEND
+  frontend:
+    image: app:frontend
+    container_name: react_frontend
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    command: npm start
+    depends_on:
+      - backend
+
+###### BASE DE DATOS
+  db:
+    image: postgres:17.2
+    container_name: postgres_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+volumes:
+  postgres_data:
