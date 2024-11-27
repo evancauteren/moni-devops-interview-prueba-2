@@ -1,6 +1,6 @@
 ## Prueba 2 - Despliegue de una aplicación Django y React.js
 
-Para ésta prueba del challenge se realiza un deployment dockerizado de una aplicación Django + React.js.
+Para ésta prueba del challenge, se realiza un deployment dockerizado de una aplicación Django + React.js.
 La solución genera imágenes del backend y del frontend y permite desplegar los correspondientes contenedores junto a una base de datos PostgreSQL.
 
 Se puede probar el código de la siguiente forma:
