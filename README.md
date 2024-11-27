@@ -24,7 +24,7 @@ Se puede probar el código de la siguiente forma:
 ```localhost:8000```
 
 #### Prerequisitos:
-- Docker Desktop (en macOS y Windows)
+- Docker o Docker Desktop (macOS y Windows)
 - Python
 - Node
 
