@@ -16,7 +16,7 @@ Se puede probar el código de la siguiente forma:
 ```docker exec -i -t django_backend bash```
     - Una vez dentro, ejecutar el siguiente comando:
 ```python manage.py migrate```
-5. Reiniciar los contenedores.
+5. Reiniciar contenedor del backend.
 
 - Una vez que los contenedores están corriendo, podemos acceder desde un navegador al frontend:
 ```localhost:3000```
